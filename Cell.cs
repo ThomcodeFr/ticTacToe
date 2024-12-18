@@ -1,7 +1,5 @@
 ﻿namespace TicTacToe;
 
-using System;
-
 /// <summary>
 /// Description for a Cell
 /// </summary>
@@ -16,13 +14,15 @@ internal class Cell
         this.Row = row;
         this.Column = column;
         this.Value = value;
-    }
+    } 
     public Cell(int row, int column)
     {
         this.Row = row;
         this.Column = column;
         this.Value = null;
     }
+    
+    public bool IsEmpty => Value == null;
 
     internal void UpdateValue(char value)
     {
