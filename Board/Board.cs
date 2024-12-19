@@ -1,7 +1,8 @@
 ﻿using CSharpFunctionalExtensions;
+using ticTacToe.Players;
 using TicTacToe;
 
-namespace ticTacToe
+namespace ticTacToe.Board
 {
     internal class Board
     {
@@ -9,7 +10,7 @@ namespace ticTacToe
 
         internal void Init()
         {
-            this.grid = new List<Cell>()
+            grid = new List<Cell>()
         {
             Cell.EmptyCell(1, 1),
             Cell.EmptyCell(1, 2),
@@ -57,7 +58,7 @@ namespace ticTacToe
             => GetCell(row, column)?.Value ?? ' ';
 
         private Cell? GetCell(int row, int column)
-            => this.grid
+            => grid
                 .Where(cell => cell.Row == row)
                 .Where(cell => cell.Column == column)
                 .FirstOrDefault();
@@ -111,7 +112,7 @@ namespace ticTacToe
             }
 
             IEnumerable<Cell> firstDiagonal = grid.Where(c => c.Row == c.Column);
-            IEnumerable<Cell> secondDiagonal = grid.Where(c => (c.Row + c.Column) == 4);
+            IEnumerable<Cell> secondDiagonal = grid.Where(c => c.Row + c.Column == 4);
 
             var diagonals = new List<IEnumerable<Cell>>
         {

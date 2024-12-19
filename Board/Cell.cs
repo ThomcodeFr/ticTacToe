@@ -1,4 +1,4 @@
-﻿namespace TicTacToe;
+﻿namespace ticTacToe.Board;
 
 /// <summary>
 /// Description for a Cell
@@ -11,22 +11,22 @@ internal class Cell
 
     public Cell(int row, int column, char value)
     {
-        this.Row = row;
-        this.Column = column;
-        this.Value = value;
-    } 
+        Row = row;
+        Column = column;
+        Value = value;
+    }
     public Cell(int row, int column)
     {
-        this.Row = row;
-        this.Column = column;
-        this.Value = null;
+        Row = row;
+        Column = column;
+        Value = null;
     }
-    
+
     public bool IsEmpty => Value == null;
 
     internal void UpdateValue(char value)
     {
-        this.Value = value;
+        Value = value;
     }
 
     internal static Cell EmptyCell(int row, int column)

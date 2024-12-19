@@ -1,11 +1,11 @@
 ﻿using CSharpFunctionalExtensions;
-using TicTacToe;
+using ticTacToe.Board;
 
-namespace ticTacToe
+namespace ticTacToe.Players
 {
     internal class StupidIA : IPlayer
     {
-        public char icon => 'O';
+        public char Icon => 'O';
 
         public Result<PlayerMoves> GetNextMove(List<Cell> grid)
         {

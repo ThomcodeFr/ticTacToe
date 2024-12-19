@@ -1,20 +1,21 @@
 ﻿using CSharpFunctionalExtensions;
-using ticTacToe;
+using ticTacToe.Board;
+using TicTacToe;
 
-namespace TicTacToe;
+namespace ticTacToe.Players;
 
 internal class Player : IPlayer
 {
-    public char icon { get; private set; }
+    public char Icon { get; private set; }
 
     public Player(char icon)
     {
-        this.icon = icon;
+        Icon = icon;
     }
 
     public Result<PlayerMoves> GetNextMove(List<Cell> grid)
     {
-        Console.WriteLine($"Player {icon} - Enter row (1-3) and column (1-3), separated by a space");
+        Console.WriteLine($"Player {Icon} - Enter row (1-3) and column (1-3), separated by a space");
         string? input = Console.ReadLine();
 
         string[]? splittedInput = input?.Split(' ');

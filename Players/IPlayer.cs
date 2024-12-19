@@ -1,5 +1,6 @@
 ﻿using CSharpFunctionalExtensions;
-using TicTacToe;
+using ticTacToe.Board;
+using ticTacToe.Players;
 
 namespace ticTacToe
 {
@@ -12,13 +13,9 @@ namespace ticTacToe
 
     interface IPlayer
     {
+        // Result permet de retourner une valeur ou une erreur
         public Result<PlayerMoves> GetNextMove(List<Cell> grid);
 
-        public char icon { get; }
+        public char Icon { get; }
     }
-
-    // Créer un stupidIA (bonus une vraie IA) qui prend la prochaine cell disponible pour jouer
-    // Par defaut, jouer contre cette IA (bonus configurer la partie 2P 1Pvs1TA IAvsIA)
-
-
 }
