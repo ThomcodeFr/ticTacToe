@@ -3,7 +3,7 @@
 /// <summary>
 /// Description for a Cell
 /// </summary>
-internal class Cell
+public class Cell
 {
     public int Row { get; private set; }
     public int Column { get; private set; }
@@ -29,6 +29,6 @@ internal class Cell
         Value = value;
     }
 
-    internal static Cell EmptyCell(int row, int column)
+    public static Cell EmptyCell(int row, int column)
         => new Cell(row, column);
 }

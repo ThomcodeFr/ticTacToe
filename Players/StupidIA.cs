@@ -3,7 +3,7 @@ using ticTacToe.Board;
 
 namespace ticTacToe.Players
 {
-    internal class StupidIA : IPlayer
+    public class StupidIA : IPlayer
     {
         public char Icon => 'O';
 
